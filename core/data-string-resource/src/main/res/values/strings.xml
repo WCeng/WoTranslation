@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 语言代码 (ISO 639-1) -->
+    <string-array name="language_codes">
+        <item>af</item> <!-- 南非荷兰语 -->
+        <item>sq</item> <!-- 阿尔巴尼亚语 -->
+        <item>am</item> <!-- 阿姆哈拉语 -->
+        <item>ar</item> <!-- 阿拉伯语 -->
+        <item>hy</item> <!-- 亚美尼亚语 -->
+        <item>az</item> <!-- 阿塞拜疆语 -->
+        <item>eu</item> <!-- 巴斯克语 -->
+        <item>be</item> <!-- 白俄罗斯语 -->
+        <item>bn</item> <!-- 孟加拉语 -->
+        <item>bs</item> <!-- 波斯尼亚语 -->
+        <item>bg</item> <!-- 保加利亚语 -->
+        <item>my</item> <!-- 缅甸语 -->
+        <item>ca</item> <!-- 加泰罗尼亚语 -->
+        <item>ceb</item> <!-- 宿务语 -->
+        <item>zh</item> <!-- 中文（简体） -->
+        <item>cht</item> <!-- 中文（繁体） -->
+        <item>co</item> <!-- 科西嘉语 -->
+        <item>hr</item> <!-- 克罗地亚语 -->
+        <item>cs</item> <!-- 捷克语 -->
+        <item>da</item> <!-- 丹麦语 -->
+        <item>nl</item> <!-- 荷兰语 -->
+        <item>en</item> <!-- 英语 -->
+        <item>eo</item> <!-- 世界语 -->
+        <item>et</item> <!-- 爱沙尼亚语 -->
+        <item>fi</item> <!-- 芬兰语 -->
+        <item>fr</item> <!-- 法语 -->
+        <item>fy</item> <!-- 弗里斯兰语 -->
+        <item>gl</item> <!-- 加利西亚语 -->
+        <item>ka</item> <!-- 格鲁吉亚语 -->
+        <item>de</item> <!-- 德语 -->
+        <item>el</item> <!-- 希腊语 -->
+        <item>gu</item> <!-- 古吉拉特语 -->
+        <item>ht</item> <!-- 海地克里奥尔语 -->
+        <item>ha</item> <!-- 豪萨语 -->
+        <item>haw</item> <!-- 夏威夷语 -->
+        <item>he</item> <!-- 希伯来语 -->
+        <item>hi</item> <!-- 印地语 -->
+        <item>hmn</item> <!-- 苗语 -->
+        <item>hu</item> <!-- 匈牙利语 -->
+        <item>is</item> <!-- 冰岛语 -->
+        <item>ig</item> <!-- 伊博语 -->
+        <item>id</item> <!-- 印尼语 -->
+        <item>ga</item> <!-- 爱尔兰语 -->
+        <item>it</item> <!-- 意大利语 -->
+        <item>ja</item> <!-- 日语 -->
+        <item>jv</item> <!-- 爪哇语 -->
+        <item>kn</item> <!-- 卡纳达语 -->
+        <item>kk</item> <!-- 哈萨克语 -->
+        <item>km</item> <!-- 高棉语 -->
+        <item>rw</item> <!-- 卢旺达语 -->
+        <item>ko</item> <!-- 韩语 -->
+        <item>ku</item> <!-- 库尔德语 -->
+        <item>ky</item> <!-- 柯尔克孜语 -->
+        <item>lo</item> <!-- 老挝语 -->
+        <item>la</item> <!-- 拉丁语 -->
+        <item>lv</item> <!-- 拉脱维亚语 -->
+        <item>lt</item> <!-- 立陶宛语 -->
+        <item>lb</item> <!-- 卢森堡语 -->
+        <item>mk</item> <!-- 马其顿语 -->
+        <item>mg</item> <!-- 马尔加什语 -->
+        <item>ms</item> <!-- 马来语 -->
+        <item>ml</item> <!-- 马拉雅拉姆语 -->
+        <item>mt</item> <!-- 马耳他语 -->
+        <item>mi</item> <!-- 毛利语 -->
+        <item>mr</item> <!-- 马拉地语 -->
+        <item>mn</item> <!-- 蒙古语 -->
+        <item>ne</item> <!-- 尼泊尔语 -->
+        <item>no</item> <!-- 挪威语 -->
+        <item>ny</item> <!-- 齐切瓦语 -->
+        <item>or</item> <!-- 奥里亚语 -->
+        <item>ps</item> <!-- 普什图语 -->
+        <item>fa</item> <!-- 波斯语 -->
+        <item>pl</item> <!-- 波兰语 -->
+        <item>pt</item> <!-- 葡萄牙语 -->
+        <item>pa</item> <!-- 旁遮普语 -->
+        <item>ro</item> <!-- 罗马尼亚语 -->
+        <item>ru</item> <!-- 俄语 -->
+        <item>sm</item> <!-- 萨摩亚语 -->
+        <item>gd</item> <!-- 苏格兰盖尔语 -->
+        <item>sr</item> <!-- 塞尔维亚语 -->
+        <item>st</item> <!-- 塞索托语 -->
+        <item>sn</item> <!-- 修纳语 -->
+        <item>sd</item> <!-- 信德语 -->
+        <item>si</item> <!-- 僧伽罗语 -->
+        <item>sk</item> <!-- 斯洛伐克语 -->
+        <item>sl</item> <!-- 斯洛文尼亚语 -->
+        <item>so</item> <!-- 索马里语 -->
+        <item>es</item> <!-- 西班牙语 -->
+        <item>su</item> <!-- 巽他语 -->
+        <item>sw</item> <!-- 斯瓦希里语 -->
+        <item>sv</item> <!-- 瑞典语 -->
+        <item>tl</item> <!-- 塔加路语 -->
+        <item>tg</item> <!-- 塔吉克语 -->
+        <item>ta</item> <!-- 泰米尔语 -->
+        <item>tt</item> <!-- 鞑靼语 -->
+        <item>te</item> <!-- 泰卢固语 -->
+        <item>th</item> <!-- 泰语 -->
+        <item>tr</item> <!-- 土耳其语 -->
+        <item>tk</item> <!-- 土库曼语 -->
+        <item>uk</item> <!-- 乌克兰语 -->
+        <item>ur</item> <!-- 乌尔都语 -->
+        <item>ug</item> <!-- 维吾尔语 -->
+        <item>uz</item> <!-- 乌兹别克语 -->
+        <item>vi</item> <!-- 越南语 -->
+        <item>cy</item> <!-- 威尔士语 -->
+        <item>xh</item> <!-- 科萨语 -->
+        <item>yi</item> <!-- 意第绪语 -->
+        <item>yo</item> <!-- 约鲁巴语 -->
+        <item>zu</item> <!-- 祖鲁语 -->
+    </string-array>
+
+    <!-- 对应的语言名称（简体中文显示） -->
+    <string-array name="languages">
+        <item>南非荷兰语</item>
+        <item>阿尔巴尼亚语</item>
+        <item>阿姆哈拉语</item>
+        <item>阿拉伯语</item>
+        <item>亚美尼亚语</item>
+        <item>阿塞拜疆语</item>
+        <item>巴斯克语</item>
+        <item>白俄罗斯语</item>
+        <item>孟加拉语</item>
+        <item>波斯尼亚语</item>
+        <item>保加利亚语</item>
+        <item>缅甸语</item>
+        <item>加泰罗尼亚语</item>
+        <item>宿务语</item>
+        <item>中文（简体）</item>
+        <item>中文（繁体）</item>
+        <item>科西嘉语</item>
+        <item>克罗地亚语</item>
+        <item>捷克语</item>
+        <item>丹麦语</item>
+        <item>荷兰语</item>
+        <item>英语</item>
+        <item>世界语</item>
+        <item>爱沙尼亚语</item>
+        <item>芬兰语</item>
+        <item>法语</item>
+        <item>弗里斯兰语</item>
+        <item>加利西亚语</item>
+        <item>格鲁吉亚语</item>
+        <item>德语</item>
+        <item>希腊语</item>
+        <item>古吉拉特语</item>
+        <item>海地克里奥尔语</item>
+        <item>豪萨语</item>
+        <item>夏威夷语</item>
+        <item>希伯来语</item>
+        <item>印地语</item>
+        <item>苗语</item>
+        <item>匈牙利语</item>
+        <item>冰岛语</item>
+        <item>伊博语</item>
+        <item>印尼语</item>
+        <item>爱尔兰语</item>
+        <item>意大利语</item>
+        <item>日语</item>
+        <item>爪哇语</item>
+        <item>卡纳达语</item>
+        <item>哈萨克语</item>
+        <item>高棉语</item>
+        <item>卢旺达语</item>
+        <item>韩语</item>
+        <item>库尔德语</item>
+        <item>柯尔克孜语</item>
+        <item>老挝语</item>
+        <item>拉丁语</item>
+        <item>拉脱维亚语</item>
+        <item>立陶宛语</item>
+        <item>卢森堡语</item>
+        <item>马其顿语</item>
+        <item>马尔加什语</item>
+        <item>马来语</item>
+        <item>马拉雅拉姆语</item>
+        <item>马耳他语</item>
+        <item>毛利语</item>
+        <item>马拉地语</item>
+        <item>蒙古语</item>
+        <item>尼泊尔语</item>
+        <item>挪威语</item>
+        <item>齐切瓦语</item>
+        <item>奥里亚语</item>
+        <item>普什图语</item>
+        <item>波斯语</item>
+        <item>波兰语</item>
+        <item>葡萄牙语</item>
+        <item>旁遮普语</item>
+        <item>罗马尼亚语</item>
+        <item>俄语</item>
+        <item>萨摩亚语</item>
+        <item>苏格兰盖尔语</item>
+        <item>塞尔维亚语</item>
+        <item>塞索托语</item>
+        <item>修纳语</item>
+        <item>信德语</item>
+        <item>僧伽罗语</item>
+        <item>斯洛伐克语</item>
+        <item>斯洛文尼亚语</item>
+        <item>索马里语</item>
+        <item>西班牙语</item>
+        <item>巽他语</item>
+        <item>斯瓦希里语</item>
+        <item>瑞典语</item>
+        <item>塔加路语</item>
+        <item>塔吉克语</item>
+        <item>泰米尔语</item>
+        <item>鞑靼语</item>
+        <item>泰卢固语</item>
+        <item>泰语</item>
+        <item>土耳其语</item>
+        <item>土库曼语</item>
+        <item>乌克兰语</item>
+        <item>乌尔都语</item>
+        <item>维吾尔语</item>
+        <item>乌兹别克语</item>
+        <item>越南语</item>
+        <item>威尔士语</item>
+        <item>科萨语</item>
+        <item>意第绪语</item>
+        <item>约鲁巴语</item>
+        <item>祖鲁语</item>
+    </string-array>
+    <string name="resource_auto_language_code">auto</string>
+    <string name="resource_auto_language_text">自动检测</string>
+
+</resources>

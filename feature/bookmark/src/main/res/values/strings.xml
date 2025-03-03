@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="feature_bookmarks_menu">菜单</string>
+    <string name="feature_bookmarks_search_place_holder">搜索翻译</string>
+    <string name="feature_bookmarks_empty_result_description">你的翻译收藏夹是空的，点击翻译旁边的星标可将其保存到这里。</string>
+</resources>

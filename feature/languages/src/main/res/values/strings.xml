@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="feature_languages_original_title">源语言</string>
+    <string name="feature_languages_menu">菜单</string>
+    <string name="feature_languages_target_title">目标语言</string>
+    <string name="feature_languages_recent_languages">近期使用过的语言</string>
+    <string name="feature_languages_auto_detect_language">检测语言</string>
+    <string name="feature_languages_all_language">所有语言</string>
+    <string name="feature_languages_back">返回</string>
+</resources>

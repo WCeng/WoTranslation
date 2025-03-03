@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+import "language_preferences.proto";
+
+option java_package = "com.wceng.core.datastore";
+option java_multiple_files = true;
+
+message UserPreference {
+
+    LanguagePreferences language_preferences = 1;
+
+    bool should_hide_onboarding = 2;
+
+    map<string, bool> collected_translate_ids = 3;
+
+    repeated string recent_original_language_codes = 4;
+
+    repeated string recent_target_language_codes = 5;
+}
+

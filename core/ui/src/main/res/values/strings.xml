@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="core_ui_translate_item">翻译</string>
+    <string name="core_ui_discard">取消收藏</string>
+    <string name="core_ui_collect">收藏</string>
+</resources>

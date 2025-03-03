@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="feature_input_history_record">历史记录</string>
+    <string name="feature_input_close_text">清除文本</string>
+    <string name="feature_input_original_place_holder">输入文字 (%s)</string>
+    <string name="feature_input_translate">翻译</string>
+    <string name="feature_input_loading">…</string>
+    <string name="feature_input_target_place_holder">翻译 (%s)</string>
+</resources>

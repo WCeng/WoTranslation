@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="feature_translate_text_field_place_holder">点击可输入文本</string>
+    <string name="feature_translate_input_text">输入文本</string>
+    <string name="feature_translate_close">关闭</string>
+    <string name="feature_translate_read_original_text_aloud">朗读源文本</string>
+    <string name="feature_translate_collect">收藏</string>
+    <string name="feature_translate_discard">取消收藏</string>
+    <string name="feature_translate_copy">复制</string>
+    <string name="feature_translate_top_bar_title">沃翻译</string>
+    <string name="feature_translate_menu">菜单</string>
+    <string name="feature_translate_reverse_language">反转语言</string>
+    <string name="feature_translate_fail">翻译失败</string>
+    <string name="feature_translate_retry">重试</string>
+    <string name="feature_translate_copied">已复制</string>
+
+</resources>

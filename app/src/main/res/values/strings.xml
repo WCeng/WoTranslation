@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">WoTranslation</string>
+    <string name="app_main_page">首页</string>
+    <string name="app_translate_page">翻译</string>
+    <string name="app_book_mark">收藏夹</string>
+    <string name="app_not_connected">⚠️ 没有连接到网络</string>
+    <string name="app_snackbar_action_label">好的</string>
+
+</resources>
