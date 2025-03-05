@@ -2,6 +2,7 @@ package com.wceng.core.data.test.repository
 
 import com.wceng.data.repository.UserDataRepository
 import com.wceng.datastore.WoPreferencesDataSource
+import com.wceng.model.DarkThemeConfig
 import com.wceng.model.LanguagePreferences
 import com.wceng.model.UserData
 import kotlinx.coroutines.flow.Flow
@@ -41,5 +42,9 @@ class FakeUserDataRepository @Inject constructor(
 
     override suspend fun setRecentTargetLanguageCode(languageCode: String) {
         dataSource.setRecentTargetLanguageCode(languageCode)
+    }
+
+    override suspend fun setDarkThemeConfig(darkThemeConfig: DarkThemeConfig) {
+        TODO("Not yet implemented")
     }
 }

@@ -5,6 +5,7 @@ import com.wceng.core.datastore.test.InMemoryDatastore
 import com.wceng.datastore.WoPreferencesDataSource
 import com.wceng.datastore.defaultOriginalLanguageCode
 import com.wceng.datastore.defaultTargetLanguageCode
+import com.wceng.model.DarkThemeConfig
 import com.wceng.model.LanguagePreferences
 import com.wceng.model.UserData
 import kotlinx.coroutines.flow.first
@@ -38,7 +39,8 @@ class OfflineFirstUserDataRepositoryTest() {
                 shouldHideOnboarding = false,
                 collectedTranslates = emptySet(),
                 recentOriginalLanguageCodes = listOf(),
-                recentTargetLanguageCodes = listOf()
+                recentTargetLanguageCodes = listOf(),
+                darkThemeConfig = DarkThemeConfig.FOLLOW_SYSTEM
             ), subject.userData.first()
         )
     }
@@ -135,6 +137,20 @@ class OfflineFirstUserDataRepositoryTest() {
         assertEquals(
             woPreferencesDataSource.userData.map { it.collectedTranslates }.first(),
             subject.userData.map { it.collectedTranslates }.first()
+        )
+    }
+
+    @Test
+    fun darkThemeConfig_set_dark_theme_delegates_to_user_preferences() = runTest {
+        subject.setDarkThemeConfig(DarkThemeConfig.DARK)
+
+        assertEquals(
+            DarkThemeConfig.DARK,
+            subject.userData.first().darkThemeConfig
+        )
+        assertEquals(
+            DarkThemeConfig.DARK,
+            woPreferencesDataSource.userData.first().darkThemeConfig
         )
     }
 

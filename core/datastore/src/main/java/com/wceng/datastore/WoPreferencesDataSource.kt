@@ -1,8 +1,11 @@
 package com.wceng.datastore
 
 import androidx.datastore.core.DataStore
+import com.wceng.core.datastore.DarkThemeConfigProto
 import com.wceng.core.datastore.LanguagePreferences
 import com.wceng.core.datastore.UserPreference
+import com.wceng.core.datastore.copy
+import com.wceng.model.DarkThemeConfig
 import com.wceng.model.UserData
 import kotlinx.coroutines.flow.map
 import javax.inject.Inject
@@ -24,7 +27,21 @@ class WoPreferencesDataSource @Inject constructor(
             shouldHideOnboarding = userPreference.shouldHideOnboarding,
             collectedTranslates = userPreference.collectedTranslateIdsMap.keys,
             recentOriginalLanguageCodes = userPreference.recentOriginalLanguageCodesList,
-            recentTargetLanguageCodes = userPreference.recentTargetLanguageCodesList
+            recentTargetLanguageCodes = userPreference.recentTargetLanguageCodesList,
+            darkThemeConfig = when (userPreference.darkThemeConfig) {
+                null,
+                DarkThemeConfigProto.DARK_THEME_CONFIG_UNSPECIFIED,
+                DarkThemeConfigProto.UNRECOGNIZED,
+                DarkThemeConfigProto.DARK_THEME_CONFIG_FOLLOW_SYSTEM,
+                    ->
+                    DarkThemeConfig.FOLLOW_SYSTEM
+
+                DarkThemeConfigProto.DARK_THEME_CONFIG_DARK ->
+                    DarkThemeConfig.DARK
+
+                DarkThemeConfigProto.DARK_THEME_CONFIG_LIGHT ->
+                    DarkThemeConfig.LIGHT
+            }
         )
     }
 
@@ -90,7 +107,8 @@ class WoPreferencesDataSource @Inject constructor(
 
     suspend fun setRecentOriginalLanguageCode(languageCode: String) {
         userPreference.updateData { currentPreferences ->
-            val new = mutableListOf(*currentPreferences.recentOriginalLanguageCodesList.toTypedArray())
+            val new =
+                mutableListOf(*currentPreferences.recentOriginalLanguageCodesList.toTypedArray())
 
             new.remove(languageCode)
             new.add(0, languageCode)
@@ -106,7 +124,8 @@ class WoPreferencesDataSource @Inject constructor(
 
     suspend fun setRecentTargetLanguageCode(languageCode: String) {
         userPreference.updateData { currentPreferences ->
-            val new = mutableListOf(*currentPreferences.recentTargetLanguageCodesList.toTypedArray())
+            val new =
+                mutableListOf(*currentPreferences.recentTargetLanguageCodesList.toTypedArray())
 
             new.remove(languageCode)
             new.add(0, languageCode)
@@ -117,6 +136,18 @@ class WoPreferencesDataSource @Inject constructor(
                 .clearRecentTargetLanguageCodes()
                 .addAllRecentTargetLanguageCodes(new)
                 .build()
+        }
+    }
+
+    suspend fun setDarkThemeConfig(darkThemeConfig: DarkThemeConfig) {
+        userPreference.updateData {
+            it.copy {
+                this.darkThemeConfig = when (darkThemeConfig) {
+                    DarkThemeConfig.FOLLOW_SYSTEM -> DarkThemeConfigProto.DARK_THEME_CONFIG_FOLLOW_SYSTEM
+                    DarkThemeConfig.DARK -> DarkThemeConfigProto.DARK_THEME_CONFIG_DARK
+                    DarkThemeConfig.LIGHT -> DarkThemeConfigProto.DARK_THEME_CONFIG_LIGHT
+                }
+            }
         }
     }
 

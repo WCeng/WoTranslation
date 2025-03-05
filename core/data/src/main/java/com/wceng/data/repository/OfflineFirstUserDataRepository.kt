@@ -1,6 +1,7 @@
 package com.wceng.data.repository
 
 import com.wceng.datastore.WoPreferencesDataSource
+import com.wceng.model.DarkThemeConfig
 import com.wceng.model.LanguagePreferences
 import com.wceng.model.UserData
 import kotlinx.coroutines.flow.Flow
@@ -39,5 +40,9 @@ class OfflineFirstUserDataRepository @Inject constructor(
 
     override suspend fun setRecentTargetLanguageCode(languageCode: String) {
         datasource.setRecentTargetLanguageCode(languageCode)
+    }
+
+    override suspend fun setDarkThemeConfig(darkThemeConfig: DarkThemeConfig) {
+        datasource.setDarkThemeConfig(darkThemeConfig)
     }
 }

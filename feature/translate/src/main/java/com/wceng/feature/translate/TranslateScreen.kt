@@ -3,6 +3,8 @@ package com.wceng.feature.translate
 import android.content.ClipData
 import android.content.ClipboardManager
 import android.content.Context
+import androidx.activity.compose.ReportDrawnWhen
+import androidx.compose.foundation.draganddrop.dragAndDropSource
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -121,6 +123,11 @@ internal fun TranslateContent(
             textToCopy = null
         }
     }
+
+    val isUserLanguageLoading = userLanguagesUiState is UserLanguagesUiState.Loading
+    val isTranslateFeedLoading = translateFeedUiState is TranslateFeedUiState.Loading
+
+    ReportDrawnWhen { !isUserLanguageLoading && !isTranslateFeedLoading }
 
     LazyColumn {
         translateTopAppBar(onClickMenu = onClickMenu)

@@ -2,6 +2,7 @@ package com.wceng.datastore
 
 import com.wceng.core.datastore.UserPreference
 import com.wceng.core.datastore.test.InMemoryDatastore
+import com.wceng.model.DarkThemeConfig
 import com.wceng.model.LanguagePreferences
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.test.runTest
@@ -122,7 +123,7 @@ class WoPreferencesDataSourceTest {
         subject.setRecentOriginalLanguageCode("g")
 
         assertEquals(
-            listOf("g","f", "e", "d", "c"),
+            listOf("g", "f", "e", "d", "c"),
             subject.userData.first().recentOriginalLanguageCodes
         )
     }
@@ -185,6 +186,30 @@ class WoPreferencesDataSourceTest {
         assertEquals(
             listOf("f", "e", "d", "a", "c"),
             subject.userData.first().recentTargetLanguageCodes
+        )
+    }
+
+    @Test
+    fun darkThemeConfigIsFollowSystem() = runTest {
+        assertEquals(
+            DarkThemeConfig.FOLLOW_SYSTEM,
+            subject.userData.first().darkThemeConfig
+        )
+    }
+
+    @Test
+    fun darkThemeConfig_updateValue_isUpdated() = runTest {
+        subject.setDarkThemeConfig(DarkThemeConfig.DARK)
+        assertEquals(
+            DarkThemeConfig.DARK,
+            subject.userData.first().darkThemeConfig
+        )
+
+        subject.setDarkThemeConfig(DarkThemeConfig.LIGHT)
+
+        assertEquals(
+            DarkThemeConfig.LIGHT,
+            subject.userData.first().darkThemeConfig
         )
     }
 }

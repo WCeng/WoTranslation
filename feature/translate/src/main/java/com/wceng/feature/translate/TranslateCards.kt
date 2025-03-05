@@ -7,9 +7,11 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.text.selection.SelectionContainer
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.VolumeUp
 import androidx.compose.material.icons.filled.Close
+import androidx.compose.material.icons.filled.ContentCopy
 import androidx.compose.material.icons.filled.CopyAll
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.Icon
@@ -81,7 +83,7 @@ internal fun TranslateOriginalInfoCard(
             Spacer(Modifier.height(8.dp))
             TranslateOriginalText(
                 text = originalText,
-                style = MaterialTheme.typography.headlineMedium,
+                style = MaterialTheme.typography.bodyLarge,
                 onTextIndex = onOriginalTextClickWithIndex,
                 modifier = Modifier.fillMaxWidth()
             )
@@ -103,8 +105,8 @@ internal fun TranslateTargetInfoCard(
         modifier = modifier
             .padding(8.dp),
         colors = CardDefaults.cardColors(
-            containerColor = MaterialTheme.colorScheme.primary,
-            contentColor = MaterialTheme.colorScheme.onPrimary
+            containerColor = MaterialTheme.colorScheme.primaryContainer,
+            contentColor = MaterialTheme.colorScheme.onPrimaryContainer
         )
     ) {
         Column {
@@ -119,11 +121,16 @@ internal fun TranslateTargetInfoCard(
                 onReadAloud = onReadAloud
             )
             Spacer(Modifier.height(8.dp))
-            Text(text = targetText, style = MaterialTheme.typography.headlineMedium)
+            SelectionContainer {
+                Text(
+                    text = targetText,
+                    style = MaterialTheme.typography.bodyLarge
+                )
+            }
             Row(horizontalArrangement = Arrangement.End, modifier = Modifier.fillMaxWidth()) {
                 IconButton(onClick = onCopy) {
                     Icon(
-                        imageVector = Icons.Filled.CopyAll,
+                        imageVector = Icons.Filled.ContentCopy,
                         contentDescription = stringResource(R.string.feature_translate_copy)
                     )
                 }

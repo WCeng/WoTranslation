@@ -14,9 +14,8 @@ android {
         minSdk = 24
         targetSdk = 34
         versionCode = 1
-        versionName = "1.0"
+        versionName = "0.0.0"
 
-//        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         testInstrumentationRunner = "com.wceng.core.testing.WoTestRunner"
     }
 
@@ -39,6 +38,7 @@ android {
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
+
 
 //            signingConfig = signingConfigs.getByName("release") // 关联签名配置
         }
@@ -73,8 +73,9 @@ dependencies {
 
     implementation(libs.androidx.activity.compose)
     implementation(libs.androidx.navigation.compose)
-
     implementation(libs.androidx.core.ktx)
+    implementation(libs.androidx.core.splashscreen)
+
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.lifecycle.runtime.compose)
     implementation(platform(libs.androidx.compose.bom))

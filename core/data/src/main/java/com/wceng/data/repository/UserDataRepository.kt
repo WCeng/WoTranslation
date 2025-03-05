@@ -1,5 +1,6 @@
 package com.wceng.data.repository
 
+import com.wceng.model.DarkThemeConfig
 import com.wceng.model.LanguagePreferences
 import com.wceng.model.UserData
 import kotlinx.coroutines.flow.Flow
@@ -21,5 +22,7 @@ interface UserDataRepository {
     suspend fun setRecentOriginalLanguageCode(languageCode: String)
 
     suspend fun setRecentTargetLanguageCode(languageCode: String)
+
+    suspend fun setDarkThemeConfig(darkThemeConfig: DarkThemeConfig)
 
 }

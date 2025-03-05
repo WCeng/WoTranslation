@@ -1,6 +1,7 @@
 package com.wceng.feature.translate
 
 import androidx.compose.foundation.gestures.detectTapGestures
+import androidx.compose.foundation.text.selection.SelectionContainer
 import androidx.compose.material3.LocalTextStyle
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -23,20 +24,23 @@ internal fun TranslateOriginalText(
 
     var textLayoutResult by remember { mutableStateOf<TextLayoutResult?>(null) }
 
-    Text(
-        text = text,
-        style = style,
-        modifier = modifier
-            .pointerInput(Unit) {
-                detectTapGestures { offset ->
-                    textLayoutResult?.let { layoutResult ->
-                        val clickedCharIndex = layoutResult.getOffsetForPosition(offset)
-                        onTextIndex(clickedCharIndex)
+    SelectionContainer {
+        Text(
+            text = text,
+            style = style,
+            modifier = modifier
+                .pointerInput(Unit) {
+                    detectTapGestures { offset ->
+                        textLayoutResult?.let { layoutResult ->
+                            val clickedCharIndex = layoutResult.getOffsetForPosition(offset)
+                            onTextIndex(clickedCharIndex)
+                        }
                     }
-                }
-            },
-        onTextLayout = { layoutResult ->
-            textLayoutResult = layoutResult
-        }
-    )
+                },
+            onTextLayout = { layoutResult ->
+                textLayoutResult = layoutResult
+            }
+        )
+    }
+
 }

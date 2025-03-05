@@ -1,6 +1,7 @@
 syntax = "proto3";
 
 import "language_preferences.proto";
+import "dark_theme_config.proto";
 
 option java_package = "com.wceng.core.datastore";
 option java_multiple_files = true;
@@ -16,5 +17,7 @@ message UserPreference {
     repeated string recent_original_language_codes = 4;
 
     repeated string recent_target_language_codes = 5;
+
+    DarkThemeConfigProto dark_theme_config = 6;
 }
 

@@ -3,6 +3,7 @@ package com.wceng.core.testing.repository
 import com.wceng.data.repository.UserDataRepository
 import com.wceng.datastore.defaultOriginalLanguageCode
 import com.wceng.datastore.defaultTargetLanguageCode
+import com.wceng.model.DarkThemeConfig
 import com.wceng.model.LanguagePreferences
 import com.wceng.model.UserData
 import kotlinx.coroutines.channels.BufferOverflow
@@ -18,7 +19,8 @@ val emptyUserData = UserData(
     shouldHideOnboarding = false,
     collectedTranslates = emptySet(),
     recentTargetLanguageCodes = emptyList(),
-    recentOriginalLanguageCodes = emptyList()
+    recentOriginalLanguageCodes = emptyList(),
+    darkThemeConfig = DarkThemeConfig.FOLLOW_SYSTEM
 )
 
 class TestUserDataRepository : UserDataRepository {
@@ -82,6 +84,10 @@ class TestUserDataRepository : UserDataRepository {
         _userData.tryEmit(currentUserData.copy(recentTargetLanguageCodes = currentUserData.recentTargetLanguageCodes.let {
             (listOf(languageCode) + it).take(5)
         }))
+    }
+
+    override suspend fun setDarkThemeConfig(darkThemeConfig: DarkThemeConfig) {
+        TODO("Not yet implemented")
     }
 
     fun setUserData(userData: UserData) {
