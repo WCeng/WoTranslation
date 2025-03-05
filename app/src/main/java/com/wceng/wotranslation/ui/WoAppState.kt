@@ -6,7 +6,6 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
-import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.navigation.NavDestination
 import androidx.navigation.NavGraph.Companion.findStartDestination
 import androidx.navigation.NavHostController
@@ -16,8 +15,8 @@ import com.wceng.data.util.NetworkMonitor
 import com.wceng.feature.bookmark.navigation.navigationToBookmark
 import com.wceng.feature.translate.navigation.navigateToTranslate
 import com.wceng.wotranslation.navigation.TopLevelDestination
-import com.wceng.wotranslation.navigation.TopLevelDestination.TRANSLATE
 import com.wceng.wotranslation.navigation.TopLevelDestination.BOOKMARK
+import com.wceng.wotranslation.navigation.TopLevelDestination.TRANSLATE
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.map
